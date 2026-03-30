@@ -1,48 +1,67 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
 }
 
-header {
-  background: #222;
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  padding: 20px;
+  padding: 30px 0;
   text-align: center;
 }
 
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  opacity: 0.9;
+}
+
+/* LAYOUT */
 .container {
   display: flex;
   max-width: 1100px;
-  margin: auto;
+  margin: 30px auto;
+  gap: 20px;
 }
 
-main {
-  width: 70%;
-  padding: 20px;
+.content {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+/* CARD */
+.card {
   background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-aside {
-  width: 30%;
-  padding: 20px;
-  background: #f1f1f1;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #222;
-  color: white;
-}
-
+/* POST LIST */
 .post-list {
   list-style: none;
   padding: 0;
 }
 
 .post-item {
+  background: white;
+  padding: 20px;
   margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
 }
 
 .post-item h2 a {
@@ -51,5 +70,13 @@ footer {
 }
 
 .post-item h2 a:hover {
-  color: #007bff;
+  color: #667eea;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
 }
