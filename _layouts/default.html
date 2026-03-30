@@ -7,34 +7,32 @@
 </head>
 <body>
 
-<header class="header">
-  <div class="header-container">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <h2>{{ site.title }}</h2>
+    <div>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <button onclick="toggleDarkMode()">🌙</button>
+    </div>
   </div>
+</nav>
+
+<header class="header">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
 </header>
 
 <div class="container">
-
-  <!-- MAIN CONTENT -->
   <main class="content">
     {{ content }}
   </main>
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="card">
       <h3>👤 About</h3>
       <p>Hung 😎 Dev Flutter + Spring Boot</p>
-    </div>
-
-    <div class="card">
-      <h3>📂 Categories</h3>
-      <ul>
-        <li>Flutter</li>
-        <li>Spring Boot</li>
-        <li>Life</li>
-      </ul>
     </div>
 
     <div class="card">
@@ -46,12 +44,17 @@
       </ul>
     </div>
   </aside>
-
 </div>
 
 <footer class="footer">
   <p>© 2026 Petrus Hung 🚀</p>
 </footer>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
