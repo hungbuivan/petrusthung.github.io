@@ -38,3 +38,20 @@
   border-radius: 5px;
   font-size: 12px;
 }
+.tag-filter {
+  margin-bottom: 20px;
+}
+
+.tag-filter span {
+  display: inline-block;
+  background: #ddd;
+  padding: 6px 10px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tag-filter span:hover {
+  background: #667eea;
+  color: white;
+}

@@ -5,15 +5,21 @@ title: Home
 
 <h1>🚀 Blog của tớ</h1>
 
-<div class="post-grid">
+<!-- TAG FILTER -->
+<div class="tag-filter">
+  <span onclick="filterPosts('all')">All</span>
+  <span onclick="filterPosts('Flutter')">Flutter</span>
+  <span onclick="filterPosts('Backend')">Backend</span>
+</div>
+
+<div class="post-grid" id="postList">
   {% for post in site.posts %}
-    <div class="post-card">
+    <div class="post-card" data-tags="{{ post.tags | join: ',' }}">
       
       <img src="{{ post.image }}" class="post-img">
 
       <div class="post-content">
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-
         <p>{{ post.excerpt }}</p>
 
         <div class="tags">
@@ -28,3 +34,19 @@ title: Home
     </div>
   {% endfor %}
 </div>
+
+<script>
+function filterPosts(tag) {
+  const posts = document.querySelectorAll(".post-card");
+
+  posts.forEach(post => {
+    const tags = post.getAttribute("data-tags");
+
+    if (tag === "all" || tags.includes(tag)) {
+      post.style.display = "block";
+    } else {
+      post.style.display = "none";
+    }
+  });
+}
+</script>
