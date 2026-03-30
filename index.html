@@ -3,14 +3,14 @@ layout: default
 title: Home
 ---
 
-<h1>📘 Bài viết mới</h1>
+<h1>🚀 Blog của tớ</h1>
 
 <ul class="post-list">
   {% for post in site.posts %}
     <li class="post-item">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.excerpt }}</p>
-      <small>{{ post.date | date: "%d-%m-%Y" }}</small>
+      <small>📅 {{ post.date | date: "%d-%m-%Y" }}</small>
     </li>
   {% endfor %}
 </ul>
