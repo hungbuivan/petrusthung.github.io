@@ -28,6 +28,9 @@
 
 <!-- CONTENT -->
 <div class="container">
+  {% if page.image %}
+  <img src="{{ page.image }}" class="post-img">
+{% endif %}
   {{ content }}
 </div>
 
