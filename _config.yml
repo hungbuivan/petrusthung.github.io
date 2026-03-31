@@ -4,3 +4,4 @@ baseurl: ""
 url: "https://hungbuivan.github.io"
 theme: null
 markdown: kramdown
+future: true

@@ -8,8 +8,6 @@ body {
 .navbar {
   background: white;
   border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
 }
 
 .nav-container {
@@ -33,9 +31,8 @@ body {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px 60px;
 }
-
 .hero h1 {
   font-size: 40px;
 }
@@ -56,14 +53,14 @@ body {
 
 /* CONTENT */
 .container {
-  max-width: 900px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 40px auto;
 }
-
 /* BLOG */
 .post-grid {
   display: grid;
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .post-card {
@@ -71,6 +68,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .post-card:hover {
